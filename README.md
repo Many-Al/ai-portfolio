@@ -1,22 +1,46 @@
-# AI Portfolio - Gemini API Integration
+# AI Portfolio - مشاريع الذكاء الاصطناعي
 
-## 📖 عن المشروع
-مشروع شخصي لتعلم وتطوير تطبيقات الذكاء الاصطناعي باستخدام Google Gemini API.
+مرحباً! هذا المستودع يحتوي على مجموعة من المشاريع العملية التي تم تطويرها باستخدام Google Gemini API و Python، بهدف عرض المهارات في بناء تطبيقات الذكاء الاصطناعي بشكل احترافي وآمن.
 
-##  الميزات
-- الاتصال بنموذج Gemini 3.8 Flash
-- حماية مفاتيح API باستخدام متغيرات البيئة
-- بيئة عمل معزولة (Virtual Environment)
+## 📁 المشاريع
 
-## 📁 الملفات
-- `app.py`: التطبيق الرئيسي للاتصال بـ Gemini
-- `list_models.py`: سكريبت لعرض النماذج المتاحة
-- `requirements.txt`: قائمة المكتبات المطلوبة
+### 1. الاتصال الآمن بـ Gemini API (`app.py`)
+- **الوصف**: تطبيق أساسي يوضح كيفية الاتصال بنموذج Gemini بشكل آمن.
+- **الميزات**: حماية مفاتيح API باستخدام `.env`، وبيئة عمل معزولة (`venv`).
+- **كيفية التشغيل**:
+  ```bash
+  cd ai-portfolio
+  source .venv/bin/activate
+  python app.py
 
-## 🛠️ كيفية التشغيل
 
-1. استنسخ المشروع:
-```bash
-git clone https://github.com/Many-Al/ai-portfolio.git
+2. شات بوت يحفظ ذاكرة المحادثة (02-chatbot-history/chatbot.py)
+الوصف: تطبيق دردشة تفاعلي يتذكر سياق المحادثة السابقة.
+الميزات: استخدام client.chats.create لإدارة الذاكرة تلقائياً، مع معالجة قوية للأخطاء (try/except) لضمان استقرار التطبيق.
+كيفية التشغيل:
+
+  cd 02-chatbot-history
+  source ../.venv/bin/activate
+  python chatbot.py
+
+
+3. ملخص النصوص الذكي (03-text-summarizer/summarizer.py)
+الوصف: أداة تقرأ ملفاً نصياً محلياً طويلاً وتقوم بتلخيصه تلقائياً إلى نقاط رئيسية.
+الميزات: التعامل مع الملفات (File I/O)، وهندسة الأوامر (Prompt Engineering) للحصول على مخرجات منظمة.
+كيفية التشغيل:
+
+  cd 03-text-summarizer
+  source ../.venv/bin/activate
+  python summarizer.py
+
+🛠️ متطلبات التشغيل العامة
+Python 3.8+
+تثبيت المكتبات: pip install -r requirements.txt
+ملف .env يحتوي على GEMINI_API_KEY.
+👨‍💻 المطور
+Mahmoud Alame
+مطور تطبيقات ذكاء اصطناعي شغوف ببناء حلول عملية وآمنة.
+📄 الرخصة
+MIT License
 
 
